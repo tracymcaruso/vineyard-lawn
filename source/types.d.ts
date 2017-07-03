@@ -13,7 +13,6 @@ export interface Request {
     params?: any;
     version: Version;
     startTime?: any;
-    original: any;
 }
 export interface SimpleResponse {
     code: number;

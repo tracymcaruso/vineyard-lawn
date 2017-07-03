@@ -29,6 +29,7 @@ var DefaultRequestListener = (function () {
     };
     return DefaultRequestListener;
 }());
+exports.DefaultRequestListener = DefaultRequestListener;
 // This function is currently modifying req.body for performance though could be changed if it ever caused problems.
 function get_arguments(req) {
     var result = req.body || {};
@@ -55,8 +56,7 @@ function formatRequest(req) {
         data: data,
         session: req.session,
         version: null,
-        startTime: new Date().getTime(),
-        original: req
+        startTime: new Date().getTime()
     };
     if (req.params)
         request.params = req.params;

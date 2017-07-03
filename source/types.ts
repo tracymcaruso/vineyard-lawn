@@ -15,7 +15,6 @@ export interface Request {
   params?: any
   version: Version
   startTime?
-  original:any
 }
 
 export interface SimpleResponse {
